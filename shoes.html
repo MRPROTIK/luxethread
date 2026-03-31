@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoes | LuxeThread Florida</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { cream: '#F8F4ED', navy: '#0F1C2E', gold: '#D4AF87' },
+                    fontFamily: { serif: ['Playfair Display', 'serif'], sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-cream text-navy font-sans">
+
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gold/10 px-6 py-4 flex justify-between items-center">
+        <a href="index.html" class="font-serif text-2xl text-gold">LuxeThread</a>
+        <div class="hidden lg:flex space-x-8 uppercase text-[11px] font-semibold tracking-widest">
+            <a href="index.html" class="hover:text-gold transition">Home</a>
+            <a href="tshirts.html" class="hover:text-gold transition">T-Shirts</a>
+            <a href="hats.html" class="hover:text-gold transition">Hats</a>
+            <a href="shorts.html" class="hover:text-gold transition">Shorts</a>
+            <a href="shoes.html" class="text-gold border-b border-gold font-bold">Shoes</a>
+            <a href="combos.html" class="text-teal font-bold hover:opacity-80 transition">Combos</a>
+        </div>
+        <div onclick="toggleCart()" class="relative cursor-pointer group">
+            <svg class="w-6 h-6 transition-transform group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+            <span id="cart-count" class="absolute -top-1 -right-2 bg-gold text-white text-[9px] w-4 h-4 rounded-full flex items-center justify-center font-bold">0</span>
+        </div>
+    </nav>
+
+    <header class="py-16 text-center bg-white border-b border-gold/10">
+        <h1 class="font-serif text-5xl italic text-navy">Premium Footwear</h1>
+        <p class="uppercase tracking-[0.4em] text-[10px] mt-3 opacity-50">Stepping into the Florida Night</p>
+    </header>
+
+    <main class="max-w-7xl mx-auto py-16 px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        
+        <div class="group bg-white p-4 shadow-sm hover:shadow-2xl transition-all duration-500">
+            <div class="relative overflow-hidden aspect-square mb-6 bg-cream">
+                <img src="images/shoe1.jpg" class="w-full h-full object-cover transition duration-1000 group-hover:scale-110">
+                <button onclick="addToCart('Everglades Runner', 145.00, 'images/shoe1.jpg')" class="absolute bottom-0 w-full bg-navy text-white py-5 translate-y-full group-hover:translate-y-0 transition-transform duration-300 uppercase text-[10px] tracking-widest font-bold">Add to Bag</button>
+            </div>
+            <div class="text-center">
+                <h3 class="font-serif text-xl italic mb-1">Everglades Runner</h3>
+                <p class="text-gold font-semibold tracking-widest">$145.00</p>
+            </div>
+        </div>
+
+        <div class="group bg-white p-4 shadow-sm hover:shadow-2xl transition-all duration-500">
+            <div class="relative overflow-hidden aspect-square mb-6 bg-cream">
+                <img src="images/shoe2.jpg" class="w-full h-full object-cover transition duration-1000 group-hover:scale-110">
+                <button onclick="addToCart('Miami Vice Low-Top', 129.00, 'images/shoe2.jpg')" class="absolute bottom-0 w-full bg-navy text-white py-5 translate-y-full group-hover:translate-y-0 transition-transform duration-300 uppercase text-[10px] tracking-widest font-bold">Add to Bag</button>
+            </div>
+            <div class="text-center">
+                <h3 class="font-serif text-xl italic mb-1">Miami Vice Low-Top</h3>
+                <p class="text-gold font-semibold tracking-widest">$129.00</p>
+            </div>
+        </div>
+
+        <div class="group bg-white p-4 shadow-sm hover:shadow-2xl transition-all duration-500">
+            <div class="relative overflow-hidden aspect-square mb-6 bg-cream">
+                <img src="images/shoe3.jpg" class="w-full h-full object-cover transition duration-1000 group-hover:scale-110">
+                <button onclick="addToCart('Luxe Leather Slide', 85.00, 'images/shoe3.jpg')" class="absolute bottom-0 w-full bg-navy text-white py-5 translate-y-full group-hover:translate-y-0 transition-transform duration-300 uppercase text-[10px] tracking-widest font-bold">Add to Bag</button>
+            </div>
+            <div class="text-center">
+                <h3 class="font-serif text-xl italic mb-1">Luxe Leather Slide</h3>
+                <p class="text-gold font-semibold tracking-widest">$85.00</p>
+            </div>
+        </div>
+
+        <div class="group bg-white p-4 shadow-sm hover:shadow-2xl transition-all duration-500">
+            <div class="relative overflow-hidden aspect-square mb-6 bg-cream">
+                <img src="images/shoe4.jpg" class="w-full h-full object-cover transition duration-1000 group-hover:scale-110">
+                <button onclick="addToCart('Sunset Suede Loafer', 175.00, 'images/shoe4.jpg')" class="absolute bottom-0 w-full bg-navy text-white py-5 translate-y-full group-hover:translate-y-0 transition-transform duration-300 uppercase text-[10px] tracking-widest font-bold">Add to Bag</button>
+            </div>
+            <div class="text-center">
+                <h3 class="font-serif text-xl italic mb-1">Sunset Suede Loafer</h3>
+                <p class="text-gold font-semibold tracking-widest">$175.00</p>
+            </div>
+        </div>
+
+        <div class="group bg-white p-4 shadow-sm hover:shadow-2xl transition-all duration-500">
+            <div class="relative overflow-hidden aspect-square mb-6 bg-cream">
+                <img src="images/shoe5.jpg" class="w-full h-full object-cover transition duration-1000 group-hover:scale-110">
+                <button onclick="addToCart('Neon District High-Top', 195.00, 'images/shoe5.jpg')" class="absolute bottom-0 w-full bg-navy text-white py-5 translate-y-full group-hover:translate-y-0 transition-transform duration-300 uppercase text-[10px] tracking-widest font-bold">Add to Bag</button>
+            </div>
+            <div class="text-center">
+                <h3 class="font-serif text-xl italic mb-1">Neon District High-Top</h3>
+                <p class="text-gold font-semibold tracking-widest">$195.00</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-navy text-cream py-16 px-6">
+        <div class="max-w-7xl mx-auto text-center border-t border-gold/20 pt-10">
+            <div class="font-serif text-2xl text-gold">LuxeThread</div>
+            <p class="text-[9px] uppercase tracking-[0.4em] opacity-40 mt-4">&copy; 2026 LuxeThread Florida</p>
+        </div>
+    </footer>
+
+    <div id="cart-sidebar" class="fixed top-0 right-0 w-80 h-full bg-white shadow-2xl z-[60] transform translate-x-full transition-transform duration-500 p-8 flex flex-col">
+        <div class="flex justify-between items-center mb-8 border-b pb-4"><h2 class="font-serif text-2xl italic">Your Bag</h2><button onclick="toggleCart()" class="text-navy transition hover:rotate-90">✕</button></div>
+        <div id="cart-items" class="flex-grow space-y-4 overflow-y-auto"></div>
+        <div class="border-t pt-6 mt-4"><div class="flex justify-between font-serif text-xl mb-6"><span>Total</span><span id="cart-total">$0.00</span></div><button class="w-full bg-navy text-white py-4 uppercase text-[10px] font-bold tracking-widest hover:bg-gold transition">Checkout</button></div>
+    </div>
+
+    <script>
+        let cart = JSON.parse(sessionStorage.getItem('luxecart')) || [];
+        function addToCart(name, price, img) { cart.push({ name, price, img }); updateCartUI(); toggleCart(true); }
+        function updateCartUI() {
+            document.getElementById('cart-count').innerText = cart.length;
+            const itemsDiv = document.getElementById('cart-items');
+            const totalSpan = document.getElementById('cart-total');
+            if (cart.length === 0) { itemsDiv.innerHTML = '<p class="text-center opacity-30 mt-10 italic">Empty Bag</p>'; }
+            else {
+                itemsDiv.innerHTML = ''; let total = 0;
+                cart.forEach((item, index) => { 
+                    total += item.price; 
+                    itemsDiv.innerHTML += `<div class="flex justify-between items-center text-sm border-b border-gold/5 pb-2"><div><p class="font-bold uppercase tracking-tighter">${item.name}</p><p class="text-gold">$${item.price}</p></div><button onclick="removeFromCart(${index})" class="text-[9px] text-red-800 underline">Remove</button></div>`; 
+                });
+                totalSpan.innerText = `$${total.toFixed(2)}`;
+            }
+            sessionStorage.setItem('luxecart', JSON.stringify(cart));
+        }
+        function removeFromCart(i) { cart.splice(i, 1); updateCartUI(); }
+        function toggleCart(forceOpen = null) {
+            const sidebar = document.getElementById('cart-sidebar');
+            if (forceOpen === true) sidebar.classList.remove('translate-x-full');
+            else sidebar.classList.toggle('translate-x-full');
+        }
+        document.addEventListener('DOMContentLoaded', updateCartUI);
+    </script>
+</body>
+</html>
