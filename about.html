@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story | LuxeThread Florida</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { cream: '#F8F4ED', navy: '#0F1C2E', gold: '#D4AF87' },
+                    fontFamily: { serif: ['Playfair Display', 'serif'], sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-cream text-navy font-sans">
+
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gold/10 px-6 py-4 flex justify-between items-center">
+        <a href="index.html" class="font-serif text-2xl text-gold">LuxeThread</a>
+        <div class="hidden lg:flex space-x-8 uppercase text-[11px] font-semibold tracking-widest">
+            <a href="index.html" class="hover:text-gold transition">Home</a>
+            <a href="tshirts.html" class="hover:text-gold transition">T-Shirts</a>
+            <a href="hats.html" class="hover:text-gold transition">Hats</a>
+            <a href="shorts.html" class="hover:text-gold transition">Shorts</a>
+            <a href="shoes.html" class="hover:text-gold transition">Shoes</a>
+            <a href="combos.html" class="text-teal font-bold hover:opacity-80 transition">Combos</a>
+            <a href="about.html" class="text-gold border-b border-gold">About</a>
+        </div>
+        <div onclick="toggleCart()" class="relative cursor-pointer group">
+            <svg class="w-6 h-6 transition-transform group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+            <span id="cart-count" class="absolute -top-1 -right-2 bg-gold text-white text-[9px] w-4 h-4 rounded-full flex items-center justify-center font-bold">0</span>
+        </div>
+    </nav>
+
+    <section class="relative h-[60vh] flex items-center justify-center overflow-hidden bg-navy">
+        <img src="images/about1.jpg" alt="LuxeThread Heritage" class="absolute inset-0 w-full h-full object-cover opacity-50">
+        <div class="relative z-10 text-center text-white px-6">
+            <h1 class="font-serif text-5xl md:text-7xl mb-4 italic">The Coastal Standard</h1>
+            <p class="uppercase tracking-[0.5em] text-xs opacity-80">Established in Florida, 2026</p>
+        </div>
+    </section>
+
+    <section class="max-w-5xl mx-auto py-24 px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+            <div>
+                <h2 class="font-serif text-4xl mb-8 italic">Crafted for the <br><span class="text-gold">Sunshine State</span></h2>
+                <p class="text-sm leading-relaxed opacity-70 mb-6">
+                    LuxeThread Florida was born from a simple observation: streetwear often lacks the breathability required for the coast, and coastal wear often lacks the edge of the street.
+                </p>
+                <p class="text-sm leading-relaxed opacity-70">
+                    We bridge that gap. Using premium Pima cotton, ventilated technical meshes, and sustainable linens, we create garments that thrive in 90-degree humidity while maintaining a silhouette that belongs in the world's most exclusive lounges.
+                </p>
+            </div>
+            <div class="relative">
+                <div class="absolute -top-4 -left-4 w-full h-full border border-gold/20 translate-x-4 translate-y-4"></div>
+                <img src="images/about2.jpg" class="relative z-10 w-full shadow-2xl grayscale hover:grayscale-0 transition duration-700">
+            </div>
+        </div>
+    </section>
+
+    <section class="h-[400px] overflow-hidden">
+        <img src="images/about3.jpg" class="w-full h-full object-cover">
+    </section>
+
+    <section class="py-24 bg-white border-y border-gold/10">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-16 text-center">
+            <div>
+                <span class="text-gold font-serif text-4xl italic">01</span>
+                <h3 class="uppercase tracking-widest text-xs font-bold mt-4 mb-4">Precision</h3>
+                <p class="text-[11px] leading-relaxed opacity-60">Every stitch is reinforced for longevity. Our garments are built to endure the salt air and the city grind.</p>
+            </div>
+            <div>
+                <span class="text-gold font-serif text-4xl italic">02</span>
+                <h3 class="uppercase tracking-widest text-xs font-bold mt-4 mb-4">Exclusivity</h3>
+                <p class="text-[11px] leading-relaxed opacity-60">We release in small batches. Once a "Combo" configuration is retired, it never returns to the vault.</p>
+            </div>
+            <div>
+                <span class="text-gold font-serif text-4xl italic">03</span>
+                <h3 class="uppercase tracking-widest text-xs font-bold mt-4 mb-4">Community</h3>
+                <p class="text-[11px] leading-relaxed opacity-60">Based in Florida, we support local artisans and photographers who capture the true essence of our home.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-navy text-cream py-16 px-6">
+        <div class="max-w-7xl mx-auto text-center">
+            <div class="font-serif text-2xl text-gold mb-4">LuxeThread</div>
+            <div class="flex justify-center space-x-6 text-[10px] uppercase tracking-widest opacity-50">
+                <a href="index.html">Home</a>
+                <a href="contact.html">Contact</a>
+                <a href="tshirts.html">Shop</a>
+            </div>
+            <p class="text-[8px] uppercase tracking-[0.5em] opacity-30 mt-10">&copy; 2026 LuxeThread Florida</p>
+        </div>
+    </footer>
+
+    <div id="cart-sidebar" class="fixed top-0 right-0 w-80 h-full bg-white shadow-2xl z-[60] transform translate-x-full transition-transform duration-500 p-8 flex flex-col">
+        <div class="flex justify-between items-center mb-8 border-b pb-4"><h2 class="font-serif text-2xl italic">Your Bag</h2><button onclick="toggleCart()" class="text-navy transition hover:rotate-90">✕</button></div>
+        <div id="cart-items" class="flex-grow space-y-4 overflow-y-auto"></div>
+        <div class="border-t pt-6 mt-4"><div class="flex justify-between font-serif text-xl mb-6"><span>Total</span><span id="cart-total">$0.00</span></div><button class="w-full bg-navy text-white py-4 uppercase text-[10px] font-bold tracking-widest hover:bg-gold transition">Checkout</button></div>
+    </div>
+
+    <script>
+        let cart = JSON.parse(sessionStorage.getItem('luxecart')) || [];
+        function updateCartUI() {
+            document.getElementById('cart-count').innerText = cart.length;
+            const itemsDiv = document.getElementById('cart-items');
+            const totalSpan = document.getElementById('cart-total');
+            if (cart.length === 0) { itemsDiv.innerHTML = '<p class="text-center opacity-30 mt-10 italic">Empty Bag</p>'; }
+            else {
+                itemsDiv.innerHTML = ''; let total = 0;
+                cart.forEach((item, index) => { 
+                    total += item.price; 
+                    itemsDiv.innerHTML += `<div class="flex justify-between items-center text-sm border-b border-gold/5 pb-2"><div><p class="font-bold uppercase tracking-tighter">${item.name}</p><p class="text-gold">$${item.price}</p></div><button onclick="removeFromCart(${index})" class="text-[9px] text-red-800 underline">Remove</button></div>`; 
+                });
+                totalSpan.innerText = `$${total.toFixed(2)}`;
+            }
+            sessionStorage.setItem('luxecart', JSON.stringify(cart));
+        }
+        function removeFromCart(i) { cart.splice(i, 1); updateCartUI(); }
+        function toggleCart(forceOpen = null) {
+            const sidebar = document.getElementById('cart-sidebar');
+            if (forceOpen === true) sidebar.classList.remove('translate-x-full');
+            else sidebar.classList.toggle('translate-x-full');
+        }
+        document.addEventListener('DOMContentLoaded', updateCartUI);
+    </script>
+</body>
+</html>
