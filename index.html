@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuxeThread Florida | Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { cream: '#F8F4ED', navy: '#0F1C2E', gold: '#D4AF87', teal: '#1A3C34' },
+                    fontFamily: { serif: ['Playfair Display', 'serif'], sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hover-gold:hover { color: #D4AF87; transition: 0.3s; }
+        .bg-blur { backdrop-filter: blur(12px); background: rgba(248, 244, 237, 0.9); }
+        .hero-gradient { background: linear-gradient(to bottom, rgba(15, 28, 46, 0.5), rgba(15, 28, 46, 0.2)); }
+    </style>
+</head>
+<body class="bg-cream text-navy font-sans">
+
+    <nav class="sticky top-0 z-50 bg-blur border-b border-gold/10 px-6 py-4 flex justify-between items-center">
+        <div class="flex flex-col cursor-pointer" onclick="window.location.href='index.html'">
+            <span class="font-serif text-2xl tracking-tighter text-gold leading-none">LuxeThread</span>
+            <span class="text-[10px] uppercase tracking-[0.3em] font-bold opacity-80">Florida</span>
+        </div>
+        
+        <div class="hidden lg:flex space-x-8 uppercase text-[11px] tracking-[0.2em] font-semibold">
+            <a href="index.html" class="text-gold">Home</a>
+            <a href="tshirts.html" class="hover-gold">T-Shirts</a>
+            <a href="hats.html" class="hover-gold">Hats</a>
+            <a href="shorts.html" class="hover-gold">Shorts</a>
+            <a href="shoes.html" class="hover-gold">Shoes</a>
+            <a href="combos.html" class="hover-gold text-teal font-bold">Combos</a>
+            <a href="about.html" class="hover-gold">About</a>
+            <a href="contact.html" class="hover-gold">Contact</a>
+        </div>
+
+        <div class="flex items-center space-x-6">
+            <div class="relative cursor-pointer" onclick="toggleCart()">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+                <span id="cart-count" class="absolute -top-1 -right-2 bg-gold text-white text-[9px] w-4 h-4 rounded-full flex items-center justify-center font-bold">0</span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative h-screen flex items-center justify-center overflow-hidden bg-navy">
+        <img src="images/index1.jpg" alt="Luxe Hero" class="absolute inset-0 w-full h-full object-cover opacity-70">
+        <div class="absolute inset-0 hero-gradient"></div>
+        <div class="relative z-10 text-center text-white px-4">
+            <h1 class="font-serif text-6xl md:text-8xl mb-8 leading-tight">LuxeThread Florida</h1>
+            <p class="uppercase tracking-[0.4em] text-sm mb-10 opacity-90 italic font-serif">Premium Streetwear for the Coastal Elite</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+                <a href="tshirts.html" class="bg-gold hover:bg-white hover:text-navy text-white px-10 py-4 transition-all uppercase text-xs tracking-widest font-bold inline-block border border-gold">Shop Essentials</a>
+                <a href="combos.html" class="bg-white/10 backdrop-blur-md hover:bg-white hover:text-navy text-white px-10 py-4 transition-all uppercase text-xs tracking-widest font-bold inline-block border border-white/30">Build Your Look</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div class="relative group h-[500px] overflow-hidden">
+                <img src="images/index2.jpg" class="w-full h-full object-cover transition duration-1000 group-hover:scale-105">
+                <div class="absolute inset-0 bg-navy/20 group-hover:bg-navy/40 transition-colors"></div>
+                <div class="absolute bottom-10 left-10 text-white">
+                    <h2 class="font-serif text-4xl mb-4 italic">The Summer Drop</h2>
+                    <a href="shorts.html" class="text-xs uppercase tracking-[0.3em] border-b border-gold pb-1">Explore Shorts</a>
+                </div>
+            </div>
+            <div class="relative group h-[500px] overflow-hidden">
+                <img src="images/index3.jpg" class="w-full h-full object-cover transition duration-1000 group-hover:scale-105">
+                <div class="absolute inset-0 bg-navy/20 group-hover:bg-navy/40 transition-colors"></div>
+                <div class="absolute bottom-10 left-10 text-white">
+                    <h2 class="font-serif text-4xl mb-4 italic">Coastal Headwear</h2>
+                    <a href="hats.html" class="text-xs uppercase tracking-[0.3em] border-b border-gold pb-1">Shop Hats</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-navy text-cream py-20 px-6 mt-10">
+        <div class="max-w-7xl mx-auto text-center">
+            <div class="font-serif text-3xl text-gold mb-2">LuxeThread</div>
+            <p class="text-[10px] uppercase tracking-[0.5em] mb-10">Florida Lifestyle</p>
+            <div class="flex justify-center space-x-8 text-xs uppercase tracking-widest opacity-60 mb-10">
+                <a href="about.html" class="hover:text-gold transition">About</a>
+                <a href="contact.html" class="hover:text-gold transition">Contact</a>
+                <a href="tshirts.html" class="hover:text-gold transition">Shop</a>
+            </div>
+            <p class="opacity-30 text-[10px] uppercase tracking-widest">&copy; 2026 LuxeThread Florida</p>
+        </div>
+    </footer>
+
+    <div id="cart-sidebar" class="fixed top-0 right-0 w-80 h-full bg-white shadow-2xl z-[60] transform translate-x-full transition-transform duration-500 p-8 flex flex-col">
+        <div class="flex justify-between items-center mb-8 border-b pb-4">
+            <h2 class="font-serif text-2xl">Bag</h2>
+            <button onclick="toggleCart()" class="text-navy">✕</button>
+        </div>
+        <div id="cart-items" class="flex-grow space-y-4 overflow-y-auto"></div>
+        <div class="border-t pt-6 mt-4">
+            <div class="flex justify-between font-serif text-xl mb-6">
+                <span>Total</span>
+                <span id="cart-total">$0.00</span>
+            </div>
+            <button class="w-full bg-navy text-white py-4 uppercase text-[10px] tracking-widest font-bold hover:bg-gold transition">Checkout</button>
+        </div>
+    </div>
+
+    <script>
+        let cart = JSON.parse(sessionStorage.getItem('luxecart')) || [];
+        function updateCartUI() {
+            document.getElementById('cart-count').innerText = cart.length;
+            const itemsDiv = document.getElementById('cart-items');
+            const totalSpan = document.getElementById('cart-total');
+            if (cart.length === 0) {
+                itemsDiv.innerHTML = '<p class="text-center opacity-30 italic mt-10">Empty Bag</p>';
+            } else {
+                itemsDiv.innerHTML = '';
+                let total = 0;
+                cart.forEach((item, index) => {
+                    total += item.price;
+                    itemsDiv.innerHTML += `<div class="flex justify-between items-center text-sm"><div><p class="font-bold">${item.name}</p><p class="text-gold">$${item.price}</p></div><button onclick="removeFromCart(${index})" class="text-[9px] uppercase text-red-800 underline">Remove</button></div>`;
+                });
+                totalSpan.innerText = `$${total.toFixed(2)}`;
+            }
+            sessionStorage.setItem('luxecart', JSON.stringify(cart));
+        }
+        function removeFromCart(i) { cart.splice(i, 1); updateCartUI(); }
+        function toggleCart() { document.getElementById('cart-sidebar').classList.toggle('translate-x-full'); }
+        document.addEventListener('DOMContentLoaded', updateCartUI);
+    </script>
+</body>
+</html>
