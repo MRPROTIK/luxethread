@@ -4,14 +4,14 @@
 LuxeThread Florida is a high-end, 8-page responsive e-commerce storefront prototype. Designed for the "Coastal Elite," the site features a minimalist luxury aesthetic, a functional session-based shopping cart, and an interactive "LuxeBuilder™" outfit creator.
 
 ## 🚀 Live Demo
-View the project live here:  
+Experience the storefront live here:  
 **[https://mrprotik.github.io/luxethread/](https://mrprotik.github.io/luxethread/)**
 
 ---
 
 ## ✨ Key Features
 
-* **LuxeBuilder™ (Interactive Doll):** A dynamic outfit builder on `combos.html` that allows users to "try on" different combinations of hats, shirts, shorts, and shoes in real-time with automatic price totaling.
+* **LuxeBuilder™ (Interactive Doll):** A dynamic outfit builder on `combos.html` where users can "try on" combinations of hats, shirts, shorts, and shoes in real-time with automatic price totaling.
 * **Persistent Shopping Cart:** A slide-out "Bag" that tracks items across all 8 pages using `sessionStorage`.
 * **Keyword Optimized:** The Contact page is strategically designed for SEO, targeting terms like "Hire a Google Ads Expert" and "Professional Google Ads Contractor."
 * **Fully Responsive:** Built with **Tailwind CSS** for a seamless experience across mobile, tablet, and desktop.
