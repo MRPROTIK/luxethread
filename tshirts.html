@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-Shirts | LuxeThread Florida</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { cream: '#F8F4ED', navy: '#0F1C2E', gold: '#D4AF87' },
+                    fontFamily: { serif: ['Playfair Display', 'serif'], sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-cream text-navy font-sans">
+
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gold/10 px-6 py-4 flex justify-between items-center">
+        <a href="index.html" class="font-serif text-2xl text-gold">LuxeThread</a>
+        <div class="hidden lg:flex space-x-8 uppercase text-[11px] font-semibold tracking-widest">
+            <a href="index.html">Home</a>
+            <a href="tshirts.html" class="text-gold">T-Shirts</a>
+            <a href="hats.html">Hats</a>
+            <a href="shorts.html">Shorts</a>
+            <a href="shoes.html">Shoes</a>
+            <a href="combos.html" class="text-teal font-bold">Combos</a>
+        </div>
+        <div onclick="toggleCart()" class="relative cursor-pointer">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+            <span id="cart-count" class="absolute -top-1 -right-2 bg-gold text-white text-[9px] w-4 h-4 rounded-full flex items-center justify-center">0</span>
+        </div>
+    </nav>
+
+    <header class="py-16 text-center">
+        <h1 class="font-serif text-5xl italic">The Essential Tees</h1>
+        <p class="uppercase tracking-widest text-[10px] mt-2 opacity-50">LuxeThread Originals</p>
+    </header>
+
+    <main class="max-w-7xl mx-auto py-12 px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        
+        <div class="group bg-white p-4">
+            <div class="relative overflow-hidden aspect-[3/4] mb-6">
+                <img src="images/tshirt1.jpg" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                <button onclick="addToCart('Gold Label Tee', 69.00, 'images/tshirt1.jpg')" class="absolute bottom-0 w-full bg-navy text-white py-4 translate-y-full group-hover:translate-y-0 transition uppercase text-[10px] tracking-widest font-bold">Add to Bag</button>
+            </div>
+            <div class="text-center">
+                <h3 class="font-serif text-xl italic mb-2">Gold Label Tee</h3>
+                <p class="text-gold font-bold">$69.00</p>
+            </div>
+        </div>
+
+        <div class="group bg-white p-4">
+            <div class="relative overflow-hidden aspect-[3/4] mb-6">
+                <img src="images/tshirt2.jpg" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                <button onclick="addToCart('Miami Night Oversize', 79.00, 'images/tshirt2.jpg')" class="absolute bottom-0 w-full bg-navy text-white py-4 translate-y-full group-hover:translate-y-0 transition uppercase text-[10px] tracking-widest font-bold">Add to Bag</button>
+            </div>
+            <div class="text-center">
+                <h3 class="font-serif text-xl italic mb-2">Miami Night Oversize</h3>
+                <p class="text-gold font-bold">$79.00</p>
+            </div>
+        </div>
+
+        <div class="group bg-white p-4">
+            <div class="relative overflow-hidden aspect-[3/4] mb-6">
+                <img src="images/tshirt3.jpg" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                <button onclick="addToCart('Palmetto Pocket Tee', 59.00, 'images/tshirt3.jpg')" class="absolute bottom-0 w-full bg-navy text-white py-4 translate-y-full group-hover:translate-y-0 transition uppercase text-[10px] tracking-widest font-bold">Add to Bag</button>
+            </div>
+            <div class="text-center">
+                <h3 class="font-serif text-xl italic mb-2">Palmetto Pocket Tee</h3>
+                <p class="text-gold font-bold">$59.00</p>
+            </div>
+        </div>
+
+        <div class="group bg-white p-4">
+            <div class="relative overflow-hidden aspect-[3/4] mb-6">
+                <img src="images/tshirt4.jpg" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                <button onclick="addToCart('Heavyweight Sand Tee', 89.00, 'images/tshirt4.jpg')" class="absolute bottom-0 w-full bg-navy text-white py-4 translate-y-full group-hover:translate-y-0 transition uppercase text-[10px] tracking-widest font-bold">Add to Bag</button>
+            </div>
+            <div class="text-center">
+                <h3 class="font-serif text-xl italic mb-2">Heavyweight Sand Tee</h3>
+                <p class="text-gold font-bold">$89.00</p>
+            </div>
+        </div>
+
+        <div class="group bg-white p-4">
+            <div class="relative overflow-hidden aspect-[3/4] mb-6">
+                <img src="images/tshirt5.jpg" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                <button onclick="addToCart('Biscayne Blue Slim', 75.00, 'images/tshirt5.jpg')" class="absolute bottom-0 w-full bg-navy text-white py-4 translate-y-full group-hover:translate-y-0 transition uppercase text-[10px] tracking-widest font-bold">Add to Bag</button>
+            </div>
+            <div class="text-center">
+                <h3 class="font-serif text-xl italic mb-2">Biscayne Blue Slim</h3>
+                <p class="text-gold font-bold">$75.00</p>
+            </div>
+        </div>
+
+    </main>
+
+    <div id="cart-sidebar" class="fixed top-0 right-0 w-80 h-full bg-white shadow-2xl z-[60] transform translate-x-full transition-transform duration-500 p-8 flex flex-col">
+        <div class="flex justify-between items-center mb-8 border-b pb-4"><h2 class="font-serif text-2xl">Bag</h2><button onclick="toggleCart()">✕</button></div>
+        <div id="cart-items" class="flex-grow space-y-4 overflow-y-auto"></div>
+        <div class="border-t pt-6 mt-4"><div class="flex justify-between font-serif text-xl mb-6"><span>Total</span><span id="cart-total">$0.00</span></div><button class="w-full bg-navy text-white py-4 uppercase text-[10px] font-bold tracking-widest">Checkout</button></div>
+    </div>
+
+    <script>
+        let cart = JSON.parse(sessionStorage.getItem('luxecart')) || [];
+        function addToCart(name, price, img) { cart.push({ name, price, img }); updateCartUI(); toggleCart(); }
+        function updateCartUI() {
+            document.getElementById('cart-count').innerText = cart.length;
+            const itemsDiv = document.getElementById('cart-items');
+            const totalSpan = document.getElementById('cart-total');
+            if (cart.length === 0) { itemsDiv.innerHTML = '<p class="text-center opacity-30 mt-10 italic">Empty Bag</p>'; }
+            else {
+                itemsDiv.innerHTML = ''; let total = 0;
+                cart.forEach((item, index) => { total += item.price; itemsDiv.innerHTML += `<div class="flex justify-between items-center"><div><p class="font-bold text-sm uppercase">${item.name}</p><p class="text-gold text-xs">$${item.price}</p></div></div>`; });
+                totalSpan.innerText = `$${total.toFixed(2)}`;
+            }
+            sessionStorage.setItem('luxecart', JSON.stringify(cart));
+        }
+        function toggleCart() { document.getElementById('cart-sidebar').classList.toggle('translate-x-full'); }
+        document.addEventListener('DOMContentLoaded', updateCartUI);
+    </script>
+</body>
+</html>
