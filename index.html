@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LuxeThread Florida | Home</title>
+    <title>LuxeThread Florida | Coastal Streetwear</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
@@ -16,99 +16,75 @@
             }
         }
     </script>
-    <style>
-        .hover-gold:hover { color: #D4AF87; transition: 0.3s; }
-        .bg-blur { backdrop-filter: blur(12px); background: rgba(248, 244, 237, 0.9); }
-        .hero-gradient { background: linear-gradient(to bottom, rgba(15, 28, 46, 0.5), rgba(15, 28, 46, 0.2)); }
-    </style>
 </head>
 <body class="bg-cream text-navy font-sans">
 
-    <nav class="sticky top-0 z-50 bg-blur border-b border-gold/10 px-6 py-4 flex justify-between items-center">
-        <div class="flex flex-col cursor-pointer" onclick="window.location.href='index.html'">
-            <span class="font-serif text-2xl tracking-tighter text-gold leading-none">LuxeThread</span>
-            <span class="text-[10px] uppercase tracking-[0.3em] font-bold opacity-80">Florida</span>
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gold/10 px-4 md:px-8 py-3 flex justify-between items-center">
+        <a href="index.html" class="font-serif text-2xl italic text-gold">LuxeThread<br><span class="text-[9px] uppercase tracking-[0.4em] font-sans ml-1 text-navy opacity-60">Florida</span></a>
+        <div class="hidden lg:flex space-x-6 uppercase text-[11px] font-semibold tracking-widest text-navy/80">
+            <a href="index.html" class="text-gold border-b border-gold">Home</a>
+            <a href="tshirts.html" class="hover:text-gold transition">T-Shirts</a>
+            <a href="hats.html" class="hover:text-gold transition">Hats</a>
+            <a href="shorts.html" class="hover:text-gold transition">Shorts</a>
+            <a href="shoes.html" class="hover:text-gold transition">Shoes</a>
+            <a href="combos.html" class="text-teal font-bold hover:opacity-80 transition">Combos</a>
+            <a href="about.html" class="hover:text-gold transition">About</a>
+            <a href="contact.html" class="hover:text-gold transition">Contact</a>
         </div>
-        
-        <div class="hidden lg:flex space-x-8 uppercase text-[11px] tracking-[0.2em] font-semibold">
-            <a href="index.html" class="text-gold">Home</a>
-            <a href="tshirts.html" class="hover-gold">T-Shirts</a>
-            <a href="hats.html" class="hover-gold">Hats</a>
-            <a href="shorts.html" class="hover-gold">Shorts</a>
-            <a href="shoes.html" class="hover-gold">Shoes</a>
-            <a href="combos.html" class="hover-gold text-teal font-bold">Combos</a>
-            <a href="about.html" class="hover-gold">About</a>
-            <a href="contact.html" class="hover-gold">Contact</a>
-        </div>
-
-        <div class="flex items-center space-x-6">
-            <div class="relative cursor-pointer" onclick="toggleCart()">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
-                <span id="cart-count" class="absolute -top-1 -right-2 bg-gold text-white text-[9px] w-4 h-4 rounded-full flex items-center justify-center font-bold">0</span>
-            </div>
+        <div onclick="toggleCart()" class="relative cursor-pointer group">
+            <svg class="w-6 h-6 transition-transform group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+            <span id="cart-count" class="absolute -top-1 -right-2 bg-gold text-white text-[9px] w-4 h-4 rounded-full flex items-center justify-center font-bold">0</span>
         </div>
     </nav>
 
-    <section class="relative h-screen flex items-center justify-center overflow-hidden bg-navy">
-        <img src="images/index1.jpg" alt="Luxe Hero" class="absolute inset-0 w-full h-full object-cover opacity-70">
-        <div class="absolute inset-0 hero-gradient"></div>
-        <div class="relative z-10 text-center text-white px-4">
-            <h1 class="font-serif text-6xl md:text-8xl mb-8 leading-tight">LuxeThread Florida</h1>
-            <p class="uppercase tracking-[0.4em] text-sm mb-10 opacity-90 italic font-serif">Premium Streetwear for the Coastal Elite</p>
-            <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
-                <a href="tshirts.html" class="bg-gold hover:bg-white hover:text-navy text-white px-10 py-4 transition-all uppercase text-xs tracking-widest font-bold inline-block border border-gold">Shop Essentials</a>
-                <a href="combos.html" class="bg-white/10 backdrop-blur-md hover:bg-white hover:text-navy text-white px-10 py-4 transition-all uppercase text-xs tracking-widest font-bold inline-block border border-white/30">Build Your Look</a>
+    <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 md:p-10">
+        
+        <a href="tshirts.html" class="group relative md:col-span-2 lg:col-span-2 overflow-hidden bg-white shadow-lg aspect-[16/10]">
+            <img src="images/index1.jpg" class="w-full h-full object-cover grayscale-0 group-hover:grayscale transition-all duration-1000">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent p-10 flex flex-col justify-end">
+                <p class="text-[10px] uppercase tracking-[0.4em] text-white/70 mb-2">Exclusive Arrival</p>
+                <h2 class="font-serif text-white text-5xl italic leading-tight mb-4">The Summer Drop</h2>
+                <div class="h-0.5 w-12 bg-gold mb-6 transition-all duration-500 group-hover:w-20"></div>
+                <p class="text-white uppercase tracking-[0.2em] text-[10px] font-semibold flex items-center gap-2">Explore Short Sleeves 
+                    <svg class="w-3 h-3 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </p>
             </div>
-        </div>
-    </section>
+        </a>
 
-    <section class="py-24 px-6 max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <div class="relative group h-[500px] overflow-hidden">
-                <img src="images/index2.jpg" class="w-full h-full object-cover transition duration-1000 group-hover:scale-105">
-                <div class="absolute inset-0 bg-navy/20 group-hover:bg-navy/40 transition-colors"></div>
-                <div class="absolute bottom-10 left-10 text-white">
-                    <h2 class="font-serif text-4xl mb-4 italic">The Summer Drop</h2>
-                    <a href="shorts.html" class="text-xs uppercase tracking-[0.3em] border-b border-gold pb-1">Explore Shorts</a>
-                </div>
+        <a href="hats.html" class="group relative overflow-hidden bg-white shadow-lg aspect-square lg:aspect-auto lg:h-full">
+            <img src="images/index2.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000">
+            <div class="absolute inset-0 bg-black/40 p-8 flex flex-col justify-end">
+                <p class="text-[10px] uppercase tracking-[0.4em] text-white/70 mb-2">Summer Essentials</p>
+                <h2 class="font-serif text-white text-4xl italic mb-6">Coastal Headwear</h2>
+                <p class="text-white uppercase tracking-[0.2em] text-[10px] font-semibold">Shop Hats</p>
             </div>
-            <div class="relative group h-[500px] overflow-hidden">
-                <img src="images/index3.jpg" class="w-full h-full object-cover transition duration-1000 group-hover:scale-105">
-                <div class="absolute inset-0 bg-navy/20 group-hover:bg-navy/40 transition-colors"></div>
-                <div class="absolute bottom-10 left-10 text-white">
-                    <h2 class="font-serif text-4xl mb-4 italic">Coastal Headwear</h2>
-                    <a href="hats.html" class="text-xs uppercase tracking-[0.3em] border-b border-gold pb-1">Shop Hats</a>
-                </div>
-            </div>
-        </div>
-    </section>
+        </a>
 
-    <footer class="bg-navy text-cream py-20 px-6 mt-10">
-        <div class="max-w-7xl mx-auto text-center">
-            <div class="font-serif text-3xl text-gold mb-2">LuxeThread</div>
-            <p class="text-[10px] uppercase tracking-[0.5em] mb-10">Florida Lifestyle</p>
-            <div class="flex justify-center space-x-8 text-xs uppercase tracking-widest opacity-60 mb-10">
-                <a href="about.html" class="hover:text-gold transition">About</a>
-                <a href="contact.html" class="hover:text-gold transition">Contact</a>
-                <a href="tshirts.html" class="hover:text-gold transition">Shop</a>
+        <a href="shorts.html" class="group relative md:col-span-2 lg:col-span-3 overflow-hidden bg-white shadow-lg aspect-[21/9]">
+            <img src="images/index3.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000">
+            <div class="absolute inset-0 bg-black/30 p-10 flex flex-col justify-end">
+                <p class="text-[10px] uppercase tracking-[0.4em] text-white/70 mb-2">Curated Looks</p>
+                <h2 class="font-serif text-white text-5xl italic leading-tight mb-6">Complete The Set</h2>
+                <div class="h-0.5 w-12 bg-gold mb-6 transition-all duration-500 group-hover:w-20"></div>
+                <p class="text-white uppercase tracking-[0.2em] text-[10px] font-semibold flex items-center gap-2">Browse All Collections 
+                    <svg class="w-3 h-3 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </p>
             </div>
-            <p class="opacity-30 text-[10px] uppercase tracking-widest">&copy; 2026 LuxeThread Florida</p>
+        </a>
+
+    </main>
+
+    <footer class="bg-navy text-cream py-16 px-6">
+        <div class="max-w-7xl mx-auto text-center border-t border-gold/20 pt-10">
+            <div class="font-serif text-2xl text-gold">LuxeThread</div>
+            <p class="text-[9px] uppercase tracking-[0.4em] opacity-40 mt-4">&copy; 2026 LuxeThread Florida</p>
         </div>
     </footer>
 
     <div id="cart-sidebar" class="fixed top-0 right-0 w-80 h-full bg-white shadow-2xl z-[60] transform translate-x-full transition-transform duration-500 p-8 flex flex-col">
-        <div class="flex justify-between items-center mb-8 border-b pb-4">
-            <h2 class="font-serif text-2xl">Bag</h2>
-            <button onclick="toggleCart()" class="text-navy">✕</button>
-        </div>
+        <div class="flex justify-between items-center mb-8 border-b pb-4"><h2 class="font-serif text-2xl italic">Your Bag</h2><button onclick="toggleCart()" class="text-navy transition hover:rotate-90">✕</button></div>
         <div id="cart-items" class="flex-grow space-y-4 overflow-y-auto"></div>
-        <div class="border-t pt-6 mt-4">
-            <div class="flex justify-between font-serif text-xl mb-6">
-                <span>Total</span>
-                <span id="cart-total">$0.00</span>
-            </div>
-            <button class="w-full bg-navy text-white py-4 uppercase text-[10px] tracking-widest font-bold hover:bg-gold transition">Checkout</button>
-        </div>
+        <div class="border-t pt-6 mt-4"><div class="flex justify-between font-serif text-xl mb-6"><span>Total</span><span id="cart-total">$0.00</span></div><button class="w-full bg-navy text-white py-4 uppercase text-[10px] font-bold tracking-widest hover:bg-gold transition">Checkout</button></div>
     </div>
 
     <script>
@@ -117,21 +93,23 @@
             document.getElementById('cart-count').innerText = cart.length;
             const itemsDiv = document.getElementById('cart-items');
             const totalSpan = document.getElementById('cart-total');
-            if (cart.length === 0) {
-                itemsDiv.innerHTML = '<p class="text-center opacity-30 italic mt-10">Empty Bag</p>';
-            } else {
-                itemsDiv.innerHTML = '';
-                let total = 0;
-                cart.forEach((item, index) => {
-                    total += item.price;
-                    itemsDiv.innerHTML += `<div class="flex justify-between items-center text-sm"><div><p class="font-bold">${item.name}</p><p class="text-gold">$${item.price}</p></div><button onclick="removeFromCart(${index})" class="text-[9px] uppercase text-red-800 underline">Remove</button></div>`;
+            if (cart.length === 0) { itemsDiv.innerHTML = '<p class="text-center opacity-30 mt-10 italic">Empty Bag</p>'; }
+            else {
+                itemsDiv.innerHTML = ''; let total = 0;
+                cart.forEach((item, index) => { 
+                    total += item.price; 
+                    itemsDiv.innerHTML += `<div class="flex justify-between items-center text-sm border-b border-gold/5 pb-2"><div><p class="font-bold uppercase tracking-tighter">${item.name}</p><p class="text-gold">$${item.price}</p></div><button onclick="removeFromCart(${index})" class="text-[9px] text-red-800 underline">Remove</button></div>`; 
                 });
                 totalSpan.innerText = `$${total.toFixed(2)}`;
             }
             sessionStorage.setItem('luxecart', JSON.stringify(cart));
         }
         function removeFromCart(i) { cart.splice(i, 1); updateCartUI(); }
-        function toggleCart() { document.getElementById('cart-sidebar').classList.toggle('translate-x-full'); }
+        function toggleCart(forceOpen = null) {
+            const sidebar = document.getElementById('cart-sidebar');
+            if (forceOpen === true) sidebar.classList.remove('translate-x-full');
+            else sidebar.classList.toggle('translate-x-full');
+        }
         document.addEventListener('DOMContentLoaded', updateCartUI);
     </script>
 </body>
