@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | LuxeThread Florida</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { cream: '#F8F4ED', navy: '#0F1C2E', gold: '#D4AF87', teal: '#1A3C34' },
+                    fontFamily: { serif: ['Playfair Display', 'serif'], sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-cream text-navy font-sans">
+
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gold/10 px-6 py-4 flex justify-between items-center">
+        <a href="index.html" class="font-serif text-2xl text-gold">LuxeThread</a>
+        <div class="hidden lg:flex space-x-8 uppercase text-[11px] font-semibold tracking-widest">
+            <a href="index.html" class="hover:text-gold transition">Home</a>
+            <a href="tshirts.html" class="hover:text-gold transition">T-Shirts</a>
+            <a href="hats.html" class="hover:text-gold transition">Hats</a>
+            <a href="shorts.html" class="hover:text-gold transition">Shorts</a>
+            <a href="shoes.html" class="hover:text-gold transition">Shoes</a>
+            <a href="combos.html" class="text-teal font-bold hover:opacity-80 transition">Combos</a>
+            <a href="about.html" class="hover:text-gold transition">About</a>
+            <a href="contact.html" class="text-gold border-b border-gold">Contact</a>
+        </div>
+        <div onclick="toggleCart()" class="relative cursor-pointer group">
+            <svg class="w-6 h-6 transition-transform group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+            <span id="cart-count" class="absolute -top-1 -right-2 bg-gold text-white text-[9px] w-4 h-4 rounded-full flex items-center justify-center font-bold">0</span>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto py-20 px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+            
+            <div>
+                <h1 class="font-serif text-5xl italic mb-6">Contact adsnord</h1>
+                <p class="text-gold uppercase tracking-[0.3em] text-[10px] font-bold mb-10">LuxeThread Corporate & Inquiries</p>
+                
+                <div class="space-y-12">
+                    <div>
+                        <h3 class="uppercase tracking-widest text-xs font-bold text-navy/40 mb-4">General Inquiry</h3>
+                        <p class="text-xl font-serif italic">hello@luxethread-fl.com</p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="uppercase tracking-widest text-xs font-bold text-navy/40 mb-4">Partnerships</h3>
+                        <p class="text-sm leading-relaxed mb-4">
+                            Looking to scale your presence? You can <span class="font-semibold">Hire a Google Ads Expert</span> directly through our digital department. 
+                        </p>
+                        <p class="text-sm leading-relaxed">
+                            For campaign strategy or to <span class="font-semibold">request a Google Ads audit</span>, please specify "ADS AUDIT" in your message subject.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="uppercase tracking-widest text-xs font-bold text-navy/40 mb-4">Location</h3>
+                        <p class="text-sm">Design District<br>Miami, FL 33137</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-10 shadow-2xl border border-gold/10">
+                <form action="#" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-[10px] uppercase tracking-widest font-bold mb-2">Name</label>
+                            <input type="text" class="w-full bg-cream/50 border border-gold/20 p-4 text-sm focus:outline-none focus:border-gold transition">
+                        </div>
+                        <div>
+                            <label class="block text-[10px] uppercase tracking-widest font-bold mb-2">Email</label>
+                            <input type="email" class="w-full bg-cream/50 border border-gold/20 p-4 text-sm focus:outline-none focus:border-gold transition">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-[10px] uppercase tracking-widest font-bold mb-2">Inquiry Type</label>
+                        <select class="w-full bg-cream/50 border border-gold/20 p-4 text-sm focus:outline-none focus:border-gold transition appearance-none">
+                            <option>Request a Quote</option>
+                            <option>Request a Free Google Ads Audit</option>
+                            <option>Professional Google Ads Contractor</option>
+                            <option>Customer Support</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-[10px] uppercase tracking-widest font-bold mb-2">Message</label>
+                        <textarea rows="5" class="w-full bg-cream/50 border border-gold/20 p-4 text-sm focus:outline-none focus:border-gold transition"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-navy text-white py-5 uppercase text-xs tracking-[0.3em] font-bold hover:bg-gold transition-all duration-500">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <section class="px-6 mb-20">
+        <div class="max-w-7xl mx-auto h-[400px] overflow-hidden">
+            <img src="images/contact1.jpg" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-1000">
+        </div>
+    </section>
+
+    <footer class="bg-navy text-cream py-16 px-6">
+        <div class="max-w-7xl mx-auto text-center border-t border-gold/20 pt-10">
+            <div class="font-serif text-2xl text-gold">LuxeThread</div>
+            <p class="text-[9px] uppercase tracking-[0.4em] opacity-40 mt-4">&copy; 2026 LuxeThread Florida</p>
+        </div>
+    </footer>
+
+    <div id="cart-sidebar" class="fixed top-0 right-0 w-80 h-full bg-white shadow-2xl z-[60] transform translate-x-full transition-transform duration-500 p-8 flex flex-col">
+        <div class="flex justify-between items-center mb-8 border-b pb-4"><h2 class="font-serif text-2xl italic">Your Bag</h2><button onclick="toggleCart()" class="text-navy transition hover:rotate-90">✕</button></div>
+        <div id="cart-items" class="flex-grow space-y-4 overflow-y-auto"></div>
+        <div class="border-t pt-6 mt-4"><div class="flex justify-between font-serif text-xl mb-6"><span>Total</span><span id="cart-total">$0.00</span></div><button class="w-full bg-navy text-white py-4 uppercase text-[10px] font-bold tracking-widest hover:bg-gold transition">Checkout</button></div>
+    </div>
+
+    <script>
+        let cart = JSON.parse(sessionStorage.getItem('luxecart')) || [];
+        function updateCartUI() {
+            document.getElementById('cart-count').innerText = cart.length;
+            const itemsDiv = document.getElementById('cart-items');
+            const totalSpan = document.getElementById('cart-total');
+            if (cart.length === 0) { itemsDiv.innerHTML = '<p class="text-center opacity-30 mt-10 italic">Empty Bag</p>'; }
+            else {
+                itemsDiv.innerHTML = ''; let total = 0;
+                cart.forEach((item, index) => { 
+                    total += item.price; 
+                    itemsDiv.innerHTML += `<div class="flex justify-between items-center text-sm border-b border-gold/5 pb-2"><div><p class="font-bold uppercase tracking-tighter">${item.name}</p><p class="text-gold">$${item.price}</p></div><button onclick="removeFromCart(${index})" class="text-[9px] text-red-800 underline">Remove</button></div>`; 
+                });
+                totalSpan.innerText = `$${total.toFixed(2)}`;
+            }
+            sessionStorage.setItem('luxecart', JSON.stringify(cart));
+        }
+        function removeFromCart(i) { cart.splice(i, 1); updateCartUI(); }
+        function toggleCart(forceOpen = null) {
+            const sidebar = document.getElementById('cart-sidebar');
+            if (forceOpen === true) sidebar.classList.remove('translate-x-full');
+            else sidebar.classList.toggle('translate-x-full');
+        }
+        document.addEventListener('DOMContentLoaded', updateCartUI);
+    </script>
+</body>
+</html>
